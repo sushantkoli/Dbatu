@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DBATU F.Y BTech Result 2025</title>
+    <style>/* General body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container for the form */
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Input field and button styling */
+input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    width: 80%;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Result area styling */
+#result {
+    margin-top: 20px;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>DBATU F.Y BTech Result 2025</h1>
+
+        <label for="rollNumber">Enter Your Roll Number (PRN):</label>
+        <input type="text" id="rollNumber" placeholder="e.g., 00000123456" />
+
+        <button onclick="checkResult()">Check Result</button>
+
+        <div id="result"></div>
+    </div>
+
+    <div id="errorModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage">Failed ahe to kay krto result bagon abyas kar jas</p>
+        </div>
+    </div>
+
+    <script>// JavaScript code to handle the result checking and modal display
+function checkResult() {
+    const rollNumber = document.getElementById('rollNumber').value.trim();
+
+    // Show the modal with "Wrong PRN Number" for any entered roll number
+    showModal("Failed ahe to kay krto result bagon abyas kar jaa");
+
+    // Clear the result section, just in case any result was previously displayed
+    document.getElementById('result').innerHTML = '';
+}
+
+// Function to display the modal
+function showModal(message) {
+    const modalMessage = document.getElementById('modalMessage');
+    modalMessage.textContent = message;
+    const modal = document.getElementById('errorModal');
+    modal.style.display = "flex";
+}
+
+// Close the modal when the user clicks the "X"
+document.getElementsByClassName('close')[0].onclick = function() {
+    document.getElementById('errorModal').style.display = "none";
+}
+
+// Close the modal if the user clicks outside the modal content
+window.onclick = function(event) {
+    const modal = document.getElementById('errorModal');
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>
